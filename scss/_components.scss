@@ -1,0 +1,21 @@
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: $cor-texto;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $cor-fundo;
+        color: $cor-principal;
+    }
+
+    &.ativo {
+        background-color: $cor-principal;
+        color: $cor-branco;
+    }
+}

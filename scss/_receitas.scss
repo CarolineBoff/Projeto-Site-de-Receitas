@@ -1,0 +1,88 @@
+.receita-e-sugestoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.receita-principal {
+    flex: 3;
+    min-width: 300px;
+
+    img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: $border-radius;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px $cor-sombra;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        color: $cor-principal;
+    }
+
+    .descricao {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        border-bottom: 2px solid $cor-principal;
+        padding-bottom: 5px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    ul, ol {
+        padding-left: 25px;
+    }
+}
+
+.sugestoes {
+    flex: 1;
+    background-color: $cor-branco;
+    padding: 20px;
+    border-radius: $border-radius;
+    min-width: 250px;
+    box-shadow: 0 4px 15px $cor-sombra;
+    align-self: flex-start;
+
+    h4 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+        color: $cor-principal;
+    }
+
+    .card-sugestao {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $cor-borda;
+        &:last-child {
+            border-bottom: none;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: $border-radius;
+            object-fit: cover;
+        }
+    }
+    
+    .dicas-card {
+        background-color: $cor-fundo;
+        border-left: 4px solid $cor-principal;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 0 8px 8px 0;
+        h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+    }
+}
