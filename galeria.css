@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.secao.galeria {
+  display: block;
+}
+
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.foto {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.foto img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.foto figcaption {
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: #d96643;
+}
+.foto:hover img {
+  transform: scale(1.05);
+}/*# sourceMappingURL=galeria.css.map */

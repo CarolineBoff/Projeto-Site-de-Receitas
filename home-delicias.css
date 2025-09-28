@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+.secao.home-delicias {
+  display: block;
+}
+
+.home-delicias {
+  text-align: center;
+}
+.home-delicias h1 {
+  font-size: 2.5rem;
+  color: #d96643;
+  margin-bottom: 10px;
+}
+.home-delicias > p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.grade-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.produto-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.produto-card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.produto-card h4 {
+  font-size: 1.5rem;
+  margin: 15px 0 5px 0;
+  color: #d96643;
+}
+.produto-card p {
+  font-size: 0.95rem;
+  padding: 0 15px;
+}/*# sourceMappingURL=home-delicias.css.map */
