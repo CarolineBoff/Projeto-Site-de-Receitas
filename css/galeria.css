@@ -1,31 +1,63 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-.secao.galeria {
-  display: block;
-}
-
 .grid-galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  /* células responsivas: ocupam no mínimo 160px, crescem para preencher */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  align-items: start;
+  grid-auto-flow: row dense;
 }
 
+/* Figura/card da foto */
 .foto {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Remove margens default de figure */
+  margin: 0;
 }
 .foto img {
   width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
+  /* garante formato quadrado e permite object-fit para recorte bonito */
+  aspect-ratio: 1/1;
+  height: auto; /* o aspect-ratio define a altura */
+  object-fit: cover;
+  display: block; /* remove espaços em branco de linha */
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 .foto figcaption {
-  padding: 15px;
+  padding: 12px 10px;
   font-weight: 600;
   text-align: center;
   color: #d96643;
+  background: transparent;
 }
 .foto:hover img {
-  transform: scale(1.05);
-}/*# sourceMappingURL=galeria.css.map */
+  transform: scale(1.06);
+}
+
+/* Em telas maiores, dar thumbnails um pouco maiores */
+@media (min-width: 1000px) {
+  .grid-galeria {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+/* Compatibilidade: se navegador não suportar aspect-ratio, podemos garantir altura fixa como fallback */
+@supports not (aspect-ratio: 1/1) {
+  .foto img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  @media (min-width: 1000px) {
+    .foto img {
+      height: 260px;
+    }
+  }
+}
+
+/*# sourceMappingURL=galeria.css.map */

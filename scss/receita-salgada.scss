@@ -1,8 +1,12 @@
-@import 'partials/variables';
-.conteudo{
-    display: none;
+@use 'variables' as *;
+@use 'receitas';
+
+/* Override: imagem principal maior na página de receita salgada */
+.secao.receita-salgada .receita-principal img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 0 auto 24px auto;
+    display: block;
 }
-
-
-
-@import 'partials/receita';

@@ -1,7 +1,3 @@
-@import 'partials/variables';
-
-.secao.home-delicias {
-    display: block;
-}
-
-@import 'partials/home';
+@use 'variables' as *;
+@use 'layout';
+@use 'home';

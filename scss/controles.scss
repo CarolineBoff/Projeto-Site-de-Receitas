@@ -1,4 +1,4 @@
-@import 'partials/variables';
-@import 'partials/base';
-@import 'partials/layout';
-@import 'partials/components';
+@use 'variables' as *;
+@use 'base';
+@use 'layout';
+@use 'components';
